@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.pp.soliderrorhandling.home.HomeFragment"
+        android:label="Home">
+        <action
+            android:id="@+id/loadError"
+            app:destination="@id/errorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/errorFragment"
+        android:name="com.pp.soliderrorhandling.error.ErrorFragment"
+        android:label="Error">
+        <argument
+            android:name="error"
+            app:argType="com.pp.soliderrorhandling.error.contracts.ErrorView" />
+    </fragment>
+</navigation>
